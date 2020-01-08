@@ -1,0 +1,77 @@
+TODOList Api
+
+
+Request: GET /todo
+Response : 
+{
+	"status" : "ok";
+	"data" : {
+		toDoList : [
+			{
+				"id" : 1,
+				"name" : "ToDo 1",
+				"dueDate" : "30/11/2019"
+			},
+			{
+
+			}
+		]
+	}
+}
+
+registerUser
+
+Request: POST /signup
+Response:
+{
+    "status" : "ok";
+    "data" : {
+        "name" : "sweta",
+        "email" : "kumarisweta042@gmail.com",
+        "password" : "password",
+    }
+}
+
+Login
+
+Request: POST /Login
+
+ToDo Details
+
+Request: GET /toDo/{id}
+Response:
+{
+	"status" : "ok";
+	"data" : {
+		"id" : 1,
+		"name" : "ToDo 1",
+		"startDate" : "20/11/2019",
+		"dueDate" : "30/11/2019",
+		"description" : "This is ToDo 1",
+		"completed" : "True/False",
+		"createdBy" : "Username",
+		"createDate" : "19/11/2019",
+ 		}
+	}
+}
+
+ToDo Create
+
+Request : POST /toDo
+payload : {"name" : "ToDO 1",
+			"startDate" : "20/11/2019",
+			"dueDate" : "30/11/2019",
+			"description" : "This is ToDo 1",
+			}
+Response:
+{
+	"status" : "ok",
+	"data" : {
+		"id" : 1
+	}
+}
+
+ToDo Update
+
+Request : PUT /toDo
+
