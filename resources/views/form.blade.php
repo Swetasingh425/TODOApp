@@ -87,7 +87,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="firstname" class="col-md-3 control-label">Email</label>
+                                    <label for="email" class="col-md-3 control-label">Email</label>
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" name="email" placeholder="Email">
                                     </div>
