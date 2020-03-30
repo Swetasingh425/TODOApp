@@ -1,4 +1,4 @@
- <?php
+<?php
 namespace App\Service;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -9,7 +9,8 @@ Class ToDoAppService {
         $data = array('name' => $userDetails["name"], 'email' => $userDetails["email"], 'password' => $userDetails["password"]);
         DB::table('users')->insert($data);
         return [
-            "status" => "ok"
+            "status" => "ok",
+            "message" => "Signup Successful"
         ];
     }
 
@@ -123,4 +124,15 @@ Class ToDoAppService {
             "message" => "ToDoCompleted"
         ];
     }
+
+    public static function deleteToDo($request, $id)
+    {
+        $emailId = $request->session()->get("email");
+        DB::table('todo')->where('id', $id)->delete();
+        return [
+            "status" => "ok",
+            "message" => "ToDo Deleted Successfully"
+        ];
+    }
 }
+

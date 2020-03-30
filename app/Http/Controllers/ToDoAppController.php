@@ -27,6 +27,7 @@ class ToDoAppController extends Controller
 
     public function createToDo(Request $request){
         $payload = $request->all();
+        return ToDoAppService::createToDo($payload, $request);
      }
 
     public function updateToDo(Request $request) {
@@ -49,5 +50,18 @@ class ToDoAppController extends Controller
         return ToDoAppService::completeToDo($request, $id);
     }
 
+   /* public function deleteToDo(Request $request, $id)
+    {
+        return ToDoAppService::deleteToDo($request, $id);
+    }
+
+    public function reminderToDo(Request $request)
+    {
+
+    }
+*/
+    public function form () {
+        return view("form");
+    }
 }
 

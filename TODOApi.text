@@ -2,7 +2,7 @@ TODOList Api
 
 
 Request: GET /todo
-Response : 
+Response :
 {
 	"status" : "ok";
 	"data" : {
